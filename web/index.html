@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BookHaven</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Work Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="w-full border-b border-gray-200/80 dark:border-gray-700/80 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm sticky top-0 z-50">
+<div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-gray-900 dark:text-white" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold">BookHaven</h2>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">New Releases</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Best Sellers</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Genres</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Authors</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="form-input w-full min-w-40 max-w-64 !h-10 rounded-lg bg-gray-100 dark:bg-gray-800 border-transparent focus:ring-2 focus:ring-primary focus:border-transparent pl-10 text-sm" placeholder="Search books..." type="search"/>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] items-center justify-center rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+<span>Log In</span>
+</button>
+<button class="flex min-w-[84px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm hover:opacity-90 transition-opacity">
+<span>Sign Up</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="flex flex-col gap-12 md:gap-16">
+<div class="@container">
+<div class="relative min-h-[400px] md:min-h-[480px] flex items-center justify-center text-center p-6 rounded-xl overflow-hidden bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEUmlUG5pDbtZiyAvSBtK5t6Q3wpqx0_3WGbgmVrKzo8ywUPNqnzuBFS79IaHXjRNaI9dD3kqk4cDCR4PbffAuVwQr_c0OzUUD9qd18sO9d_QU9HdxtHXwsDiPMU93QVYUAb09r-jeryzGXKBiRVMAVBWKnixxogiGXtChItFUulPyn0i9Odhq8RHelMIntU41kMj--8212EZJUyp1qCG4F8cWYkLS4ck8eGSnjqR02K_KnulG8uhi_LYTd-wTz3SkYDSqRzINOgZF");'>
+<div class="flex flex-col gap-4 max-w-3xl z-10">
+<h1 class="text-white text-4xl @[480px]:text-5xl font-black tracking-tight">Discover Your Next Great Read</h1>
+<p class="text-white/80 text-base @[480px]:text-lg">Explore our curated collection of books across all genres. Find your next adventure today.</p>
+<div class="mt-4">
+<button class="flex mx-auto min-w-[84px] items-center justify-center rounded-lg h-12 px-6 bg-primary text-white font-bold text-base hover:opacity-90 transition-opacity">
+<span>Browse Books</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<section>
+<h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white px-4 mb-4">Featured Books</h2>
+<div class="relative">
+<div class="flex overflow-x-auto pb-6 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch gap-4 px-4">
+<div class="flex flex-col gap-3 w-52 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsPMzMFpYlBB5CLeRyTEYE-nVNp7l9IuKtZPIn7MHuX_QOkD3QzDzC3U_lUK_PM-j8qoCH6pTNp618ppR1iqxJjIR7tpKGgpVvdnG3evIfOtiJjdXT0heyWPBlYAG5BxUiLG8RGA2M6D7EGaRYcBr2Baxvv0ujRMx0Fj20wRj1tjLlU5jcNb1AUTCxsW0nDCfYBedMgzYQUfewQI6D-RgVjKT8Gkc9wU_xeztdQkDYS5gYgS36K0_uoUmAQ-ky1To2fcP-cHSVIDHM");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">The Enchanted Forest</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Anya Petrova</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-52 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRiXrGjki71V32uqspD9nFMcfL6RkSbouqujSFz8WkHPj8jSnf-LS6MIRr1OZPgZocLR-WT9w4TqmEzHiptcHfqohBqg6meMKwRNytlvAfUUNIMbIwHwRI_Mqbbpzf5lwltMi6qACHbkVuSx-YYf10UBj9b9Cv_qfuWV0HBsMnbCEVULffSH-dMhT2q-WBi4a5cmTzip1zDdMAwEc__XmyqSwZQ8lwhFX6qyHYS6ickqZibYeaH9XAPesOPKXFxk4E0G9cqWCFYLuk");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">Space Odyssey</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Ethan Cole</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-52 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoWwhAxtwkYgD9KV1wA5UYEcHcJs0n0bWd4CZcLZTzwN5yVcpCRB7Y8DnWoYI65ijaEneX29YAXAGLOeiiojBhUDsMW5uNXUTjQgYuCtmxm-2zDGQLroHYAq1TTnaJTY4mNcj0-ZwU5sR2fNC_2gsHkFzO6joPprgf57yTv7E_5gRw7023fa_DaaYkOsPUt80sEAAIsADdR6RUNrSVKqUu4DRc6aK-lohOf_KkQ4gknekisQWI_DocFyFE9QS9XPFODfx7WG_s6tqj");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">The Secret of the Old Mill</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Olivia Reed</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-52 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuyc820u6g_grGMGF15eNYOgh1A8dmyn4O5LPHotd99dOQUos7SKAsC8OicQMlpKnY_1WtNrewwOhMIj5OQtB8ELiQq1AXVemvL7-DmQZYP1Vrp6GnfeOCNnbNbf7oJz9Vm5IqysC0oJuYJZjvuvH-UCl2XGVkMeOnueKSxv5LsivefZqY4nYi5slwXUDtFSBakTtxgNwRu2G1A5QOlpTVbJZ7Iw-O07G-tlh7LoyxIAO3Z95Uy3EmdVxksAiaxsO5MMysqIGpG220");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">Echoes of the Past</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Sophia Bennett</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-52 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUQ3cVvWF8TtW6h27ihAoZ9jJcVbkBPfAc2CDL3-HrOPnQ8rB0ld7JfN4JwmKgaguL0lx_Dnosa-WMc5vRb5BjkPE3s08dhZtfxlCCxJv8c5Va4xirsYwJepMzj44gYzhB449aFm0XZmw_eTnkYA4qkW8_GpRNtV1s3FwNtDewJ0DMKV5GSxm6SxEstyrY0tJpIaM6tAqxSOkdYRhzuV15U_cDYg9ShisGXpBXkormx3PaAeTNbiHwrr0JLEDaVdR4KC6DfmpVKpHt");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">The Quantum Paradox</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Marcus Thorne</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white px-4 mb-4">Popular Genres</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-4">
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDc4a8Tk4UW-6knWAoJdfT1XFUXWbKAoRLOTNTt0SYW8rM1IgkXhRSf8wsm82MntzOL3x9ylQfjDEdmJzTp5FGz3brkpn0emX39BMVlMD1oQIGxI5DCMhgi-o8dJwFVDs2ZH7Ler3JcS5fJKsqWyUyZdQOXFeTcZ_n9N9nl56br77BXKWAWK_pyf4hJXjux7l6kEuaOuVPt2jg6CfTT9sEeTVGDbjFkKsZbm-JEe_xHpMxvlak5NT2dzSDeShSpzsaOXOeUyga4rIp3");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Fantasy</p>
+</a>
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfv22UwymJKd_uymtpTiiRjW7aG3TVTmLyj9xt55ljFZimopL71eWgYJk_Zvjw6pV5VzbTAY3G_fg7nrIgAtwFpw7o8LMgbNumoodkyCFrDUhKLNu0IiNAZ0Mp7j3zJML3K2xjuo3ULRZejtraGjHVUpRFkkwuQIFhg5E7qTovWbHXViZFmGtlwQCOnfhxbsylnh_OrvIOnt08b4pgugc_hg38DnEuyRxCW_y8P_vWNthTb38Z0Nxe9vv2EYccaPahfRzUUmllTr3N");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Science Fiction</p>
+</a>
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZylcYl-gQeBJFH8ucXVAPSeejXizhxhh9mf5v9Srxy3e32UrRZvmU38egg8zU7RwiC-8_mjpB61i5EwBg6MDq_8QPxlAH9EKb6oMta_7SQ8HK-_IVaenynCp3ol4lSuwV_JCqXYWixY4xknHgEh7PykhraTosHAvC1Bkoh5jHLWlNB4RygMiOE_LTBKf_H6Md8vIVq7kcOWHCy_ney-1yoLHX6XyvucoRRMC7he3U63WqyhbzIFF2iQ3zHMd4Q66hjG69w-P4qOBM");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Mystery</p>
+</a>
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClbp_YDj_7VXvf9c67anUUuZD4WTrfoBeDcHpDvO4zCyTBWeGDAy324vQpKgOGCuEH_GOoWt_ioALynprXI0pQxuL7tZNLM8zUSLCQt_fB8T157MpCp8gwHjNTaBM6546iI8oG_d_wwPUjK0HRVWZDGWrnq-vRnxV501QqMveE6M7p9seeMUrKoG2arXkmX4Z6BMifGfGDJ7YL0gMywr7tp9Lx1Z_E7cLZdQ1nLYI_UXuMmtd7quYWRl1y5zzkG7ZjiciPbKLPgOq5");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Romance</p>
+</a>
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCX_a4EU2St_FLo7oIxNE43Ng2Q9_nQfpf0DiqguZ9ZQdnJg3xNfWEqirNIiTGqoGDcTQJS9L_Zga-UUJRIb0qcQWdwQKz2MocrPLWlHo_l-ILvZsizfd0sefrNhTBYzc7AIX1VSG_Fb_3jMRo4Aqtaq3IUNiMB5L2QRibcR_cwlZF-bCQH2YaWAhLjsZ86g86M9mnwWLjlCjqRTQww1CzId_QXT_RGR8o5WtrfFtQkeJzpXGcDKNwbQ--HNZ1Siie5WSoK5H_ZC2xK");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Thriller</p>
+</a>
+<a class="flex flex-col gap-3 group" href="#">
+<div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_7mqVhoNUCraHi88c3ingZ7OJHbndqFf_Uv3nEepgt-kaCteAc-a6GcwJfO4h5l356fJjaqQbYjpI0eKTXqYGdDEFvZ8k5dHP76Gge_-JLCC4QuayOPHVU4nSArWfwfzeAHfJn-kkq4VbJTGHkqwQNc4y7c13HdipDtxvvdRqSCTiTq-h5XKGIy0VhthXQkY27HgX9llqj2Cb_8Yt0dha14WWr98j2II5v_QdGZEKDQaO3vF-ejwuKOASVC-u_muXx2oA5gXa2oNZ");'></div>
+<p class="font-semibold text-center text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Historical Fiction</p>
+</a>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white px-4 mb-4">New Releases</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-4 gap-y-8 px-4">
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuyc820u6g_grGMGF15eNYOgh1A8dmyn4O5LPHotd99dOQUos7SKAsC8OicQMlpKnY_1WtNrewwOhMIj5OQtB8ELiQq1AXVemvL7-DmQZYP1Vrp6GnfeOCNnbNbf7oJz9Vm5IqysC0oJuYJZjvuvH-UCl2XGVkMeOnueKSxv5LsivefZqY4nYi5slwXUDtFSBakTtxgNwRu2G1A5QOlpTVbJZ7Iw-O07G-tlh7LoyxIAO3Z95Uy3EmdVxksAiaxsO5MMysqIGpG220");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">Echoes of the Past</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Sophia Bennett</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUQ3cVvWF8TtW6h27ihAoZ9jJcVbkBPfAc2CDL3-HrOPnQ8rB0ld7JfN4JwmKgaguL0lx_Dnosa-WMc5vRb5BjkPE3s08dhZtfxlCCxJv8c5Va4xirsYwJepMzj44gYzhB449aFm0XZmw_eTnkYA4qkW8_GpRNtV1s3FwNtDewJ0DMKV5GSxm6SxEstyrY0tJpIaM6tAqxSOkdYRhzuV15U_cDYg9ShisGXpBXkormx3PaAeTNbiHwrr0JLEDaVdR4KC6DfmpVKpHt");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">The Quantum Paradox</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Marcus Thorne</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKs6p_YxArvyA68CM3C051ng9Q7OIzAdeLiotp-di8rhXikJHECfHKXrHC59T_lsaBYI_156MDTWsCEQ5c6-YCiqifQBAduaEkscxXUnEW8OtGrJJtoJ7gEZdcc2C48_easH5SR6OXqIHAcY6s0CW2PMhZmMSXhelcI9qDyUsucRdY9MK8oo3WoHq_x6OgdxIgwQ39jZzd6gB0RfteC4NXtP1XG5idxUgMF1YTiL5QSw7asnZHBQXaipUI6NCThFHNkdsrkZqkaqvW");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">Shadows in the City</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Isabella Rossi</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBN7ui38PUwd19M69zL4k-pkbu4HBLtlmHZCvV83NSOqwKDG-6nBXeLUHOs2jff80wn4WiT6XgE7_8hAuVX-MAWqMayl1uEilrBLKGtqZAB_Fd9L6339n6amDwGxIAExw-nWBYVeep30YM9PBoNPObzKpPrLhQ4VyR9LUUSKMsU1iqy4I9Pac_Mt5TUn6GztbY3dK9LO99aHWfdbOoUzL89FwUR-t1XT3XSowLBGz_98yhZ_KjxPnw-L3fyIHon6m2HJ3RE6EcPfjG7");'></div>
+<div>
+<p class="font-semibold text-gray-800 dark:text-gray-200 truncate">Love's Horizon</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">by Daniel Hayes</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
